@@ -3,9 +3,7 @@ import greetTheUser from '../src/cli.js';
 import readlineSync from 'readline-sync';
 import { getRandom } from '../src/cli.js';
 
-console.log('Welcome to the Brain Games!');
 const userName = greetTheUser();
-
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
 for (let i = 0; i < 3; i += 1) {
