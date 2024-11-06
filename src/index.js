@@ -66,4 +66,11 @@ export const askUserAndCalculate = (userName) => {
 
  }
  return isGameOver;
+};
+export const getGreatestCommonDivisor = (num1, num2) => {
+  if (num2 !== 0) {
+    const gcd = num1 % num2;
+    return getGreatestCommonDivisor(num2, gcd);
+  }
+  return num1;
 }
