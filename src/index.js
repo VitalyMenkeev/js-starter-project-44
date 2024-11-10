@@ -73,4 +73,22 @@ export const getGreatestCommonDivisor = (num1, num2) => {
     return getGreatestCommonDivisor(num2, gcd);
   }
   return num1;
+};
+export const isPrime = (number) => {
+    if (number < 2) {
+      return 'Число должно быть больше 1';
+    } else if (number === 2) {
+      return true;
+    }
+  
+    let i = 2;
+    const limit = Math.sqrt(number);
+    while (i <= limit) {
+      if (number % i === 0) {
+        return false;
+      }
+      i +=1;
+    }
+    
+    return true;
 }
