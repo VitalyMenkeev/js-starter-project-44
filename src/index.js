@@ -1,8 +1,8 @@
-import { getRandom } from "./cli.js";
-import readlineSync from "readline-sync";
+import { getRandom } from './cli.js';
+import readlineSync from 'readline-sync';
 
 export const askUserAndCalculate = (userName) => {
-  const operators = ["*", "-", "+"];
+  const operators = ['*', '-', '+'];
   const firstOperand = getRandom(1, 10);
   const secondOperand = getRandom(1, 10);
   const randomIndex = Math.floor(Math.random() * operators.length);
@@ -12,66 +12,66 @@ export const askUserAndCalculate = (userName) => {
   let isGameOver = null;
 
   switch (operator) {
-    case "+":
+    case '+':
       result = firstOperand + secondOperand;
       userAnswer = readlineSync.questionInt(
-        `${"Question: "}${firstOperand}${" "}${operator}${" "}${secondOperand}${" "}`
+        `${'Question: '}${firstOperand}${' '}${operator}${' '}${secondOperand}${' '}`
       );
-      console.log(`${"Your answer: "}${userAnswer}`);
+      console.log(`${'Your answer: '}${userAnswer}`);
       if (userAnswer === result) {
-        console.log("Correct!");
+        console.log('Correct!');
         isGameOver = false;
       } else {
         console.log(
-          `${"'"}${userAnswer}${"'"}${" is wrong answer ;(. Correct answer was "}${"'"}${result}${"'"}`
+          `${"'"}${userAnswer}${"'"}${' is wrong answer ;(. Correct answer was '}${"'"}${result}${"'"}`
         );
-        console.log(`${"Let's try again, "}${userName}${"!"}`);
+        console.log(`${"Let's try again, "}${userName}${'!'}`);
         isGameOver = true;
         break;
       }
 
       break;
 
-    case "-":
+    case '-':
       result = firstOperand - secondOperand;
       userAnswer = readlineSync.questionInt(
-        `${"Question: "}${firstOperand}${" "}${operator}${" "}${secondOperand}${" "}`
+        `${'Question: '}${firstOperand}${' '}${operator}${' '}${secondOperand}${' '}`
       );
-      console.log(`${"Your answer: "}${userAnswer}`);
+      console.log(`${'Your answer: '}${userAnswer}`);
       if (userAnswer === result) {
-        console.log("Correct!");
+        console.log('Correct!');
         isGameOver = false;
       } else {
         console.log(
-          `${"'"}${userAnswer}${"'"}${" is wrong answer ;(. Correct answer was "}${"'"}${result}${"'"}`
+          `${"'"}${userAnswer}${"'"}${' is wrong answer ;(. Correct answer was '}${"'"}${result}${"'"}`
         );
-        console.log(`${"Let's try again, "}${userName}${"!"}`);
+        console.log(`${"Let's try again, "}${userName}${'!'}`);
         isGameOver = true;
         break;
       }
       break;
 
-    case "*":
+    case '*':
       result = firstOperand * secondOperand;
       userAnswer = readlineSync.questionInt(
-        `${"Question: "}${firstOperand}${" "}${operator}${" "}${secondOperand}${" "}`
+        `${'Question: '}${firstOperand}${' '}${operator}${' '}${secondOperand}${' '}`
       );
-      console.log(`${"Your answer: "}${userAnswer}`);
+      console.log(`${'Your answer: '}${userAnswer}`);
       if (userAnswer === result) {
-        console.log("Correct!");
+        console.log('Correct!');
         isGameOver = false;
       } else {
         console.log(
-          `${"'"}${userAnswer}${"'"}${" is wrong answer ;(. Correct answer was "}${"'"}${result}${"'"}`
+          `${"'"}${userAnswer}${"'"}${' is wrong answer ;(. Correct answer was '}${"'"}${result}${"'"}`
         );
-        console.log(`${"Let's try again, "}${userName}${"!"}`);
+        console.log(`${"Let's try again, "}${userName}${'!'}`);
         isGameOver = true;
         break;
       }
       break;
 
     default:
-      result = "error";
+      result = 'error';
       break;
   }
   return isGameOver;
@@ -85,7 +85,7 @@ export const getGreatestCommonDivisor = (num1, num2) => {
 };
 export const isPrime = (number) => {
   if (number < 2) {
-    return "Число должно быть больше 1";
+    return 'Число должно быть больше 1';
   } else if (number === 2) {
     return true;
   }
